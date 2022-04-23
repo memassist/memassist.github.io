@@ -111,7 +111,7 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`${siteConfig.title}`}
+      title={`Locality & Cache Memory Optimization Tool`}
       description={`${siteConfig.tagline}`}>
       <HomepageHeader />
       <main>

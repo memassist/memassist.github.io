@@ -17,12 +17,18 @@ const config = {
   projectName: 'memassist.github.io', // Usually your repo name.
   deploymentBranch: 'gh-pages',
 
+  i18n: {
+    defaultLocale: 'en-GB',
+    locales: ['en-GB']
+  },
+
   presets: [
     [
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          showLastUpdateTime: false,
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl: 'https://github.com/memassist/memassist.github.io/edit/main',
@@ -54,7 +60,6 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       metadata: [{name: 'keywords', content: 'memassist, reuse distance analysis, locality optimization, source code analysis'}],
-      hideableSidebar: true,
       colorMode: {
         defaultMode: 'light',
         disableSwitch: false,
@@ -63,6 +68,11 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
+      },
+      docs: {
+        sidebar: {
+          hideable: true
+        }
       },
       navbar: {
         title: 'MemAssist',
